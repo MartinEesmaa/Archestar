@@ -325,7 +325,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34584
+  m_Name: pb_Mesh111564
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3788,7 +3788,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.8301887, g: 0.73037887, b: 0.45817018, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.69
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3858,7 +3858,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34622
+  m_Name: pb_Mesh111602
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4215,6 +4215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24c9a17f0b305f48bf4465d5891c087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelIndex: 0
 --- !u!64 &1255756514
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4223,10 +4224,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255756512}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1065306416}
 --- !u!33 &1255756515
@@ -7320,6 +7321,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 121078, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
