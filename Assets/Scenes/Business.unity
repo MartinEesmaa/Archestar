@@ -11793,7 +11793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveValue:
-    actionPath: /actions/platformer/in/Move
+    actionPath: /actions/default/in/MovePlayer
     needsReinit: 0
   maxSpeed: 10
   sensitivity: 5
