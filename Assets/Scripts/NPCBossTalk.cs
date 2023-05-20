@@ -11,11 +11,14 @@ public class NPCBossTalk : MonoBehaviour
     public GameObject dialogueCanvas;
     public TextMeshProUGUI dialogueText;
 
+    public string playerTag = "Player";
+    public KeyCode activationKey = KeyCode.JoystickButton0;
+
     private bool inRange = false;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(playerTag))
         {
             inRange = true;
         }
@@ -23,7 +26,7 @@ public class NPCBossTalk : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(playerTag))
         {
             inRange = false;
             dialogueCanvas.SetActive(false);
@@ -32,11 +35,25 @@ public class NPCBossTalk : MonoBehaviour
 
     void Update()
     {
-        if (inRange && Input.GetKeyDown(KeyCode.JoystickButton0) || Input.GetButtonDown("Fire1"))
+        if (inRange && ColliderContainsPlayer() && (Input.GetKeyDown(activationKey) || Input.GetButtonDown("Fire1")))
         {
             dialogueCanvas.SetActive(true);
             StartCoroutine(DisplayDialogue());
         }
+    }
+
+    bool ColliderContainsPlayer()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, transform.localScale.x / 2f);
+
+        foreach (Collider collider in colliders)
+        {
+            if (collider.gameObject.CompareTag(playerTag))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     IEnumerator DisplayDialogue()
