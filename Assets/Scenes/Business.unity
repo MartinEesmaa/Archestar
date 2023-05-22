@@ -10733,7 +10733,7 @@ MonoBehaviour:
   dialogue: Hello.
   dialogueCanvas: {fileID: 1951335239}
   dialogueText: {fileID: 1249367058}
-  playerTag: PlayerCollider
+  playerTag: Player
   activationKey: 330
 --- !u!135 &1675742143
 SphereCollider:
@@ -11716,7 +11716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 121078, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 191996, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_TagString
